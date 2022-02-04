@@ -1,0 +1,23 @@
+
+// base.scss Fonts
+$primary-font: 'Silkscreen Expanded', sans-serif;
+$secondary-font: 'Fira Code', monospace;
+
+//base.scss Colors
+$primary-color: #2E132C;
+$secondary-color: #F50D5A;
+$tertiary-color: #FFFF;
+
+.list_wrapper {
+
+    background-color: #f7a8dc;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+
+    .noTweets {
+        font-family: $primary-font;
+        font-size: 2.1rem;
+        padding-top: 30px;
+    }
+}

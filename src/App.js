@@ -1,31 +1,27 @@
+import React, { useEffect, useState } from 'react';
 import './App.scss';
-import { addDoc } from "firebase/firestore";
-import { getRefCollection } from "./Firebase/config";
-import Tweet from "./Components/Tweet/Tweet";
+import useTweets from './../src/Components/Hooks/useTweets';
+import TweetsList from "../src/Components/List/TweetsList";
 import FormTweet from "./Components/Form/FormTweet";
 
-
+const initialFormState = {
+  tweet: "",
+  author: "",
+}
 
 function App() {
 
-const newTweet = async () => {
-  try {
-    const docRef = await addDoc(getRefCollection("tweets"), {
-      text: "Pruebaa",
-      author: "Dami",
-    });
-    console.log("Document written with ID: ", docRef.id);
-  } catch (e) {
-    console.error("Error adding document: ", e);
-  }
-}  
-
+  const [formState, setFormState] = useState(initialFormState); 
 
   return (
     <div className="App">
       <h1>Hello there!</h1>
-      <FormTweet />
-      <Tweet />
+      <FormTweet 
+      formState={formState}
+      setFormState={setFormState}
+      initialFormState={initialFormState}
+      />
+      <TweetsList />
     </div>
   );
 }

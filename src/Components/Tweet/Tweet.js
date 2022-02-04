@@ -3,7 +3,7 @@ import React from "react";
 import './Tweet.scss';
 import userLogo from "../../../src/user-img.svg"
 
-const Tweet = () => {
+const Tweet = ({id, text, author}) => {
     return (
         <div className="tweet">
         <div className="tweet__header">
@@ -12,7 +12,7 @@ const Tweet = () => {
                 src={userLogo}
                 alt="User"
             />
-            <span>@user</span>
+            <span>{author}</span>
             </div>
             <div className="tweet__header__date">
             <span>1 day ago</span>
@@ -20,9 +20,7 @@ const Tweet = () => {
         </div>
         <div className="tweet__content">
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            tincidunt, nisi vitae congue egestas, nisi nulla aliquet lacus, vitae
-            commodo nisl enim eu nisi.
+            {text}
             </p>
         </div>
         </div>
