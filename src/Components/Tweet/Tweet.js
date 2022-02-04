@@ -2,8 +2,12 @@
 import React from "react";
 import './Tweet.scss';
 import userLogo from "../../../src/user-img.svg"
+import useTweets from "../Hooks/useTweets";
 
 const Tweet = ({id, text, author}) => {
+
+    const { deleteTweet } = useTweets();
+
     return (
         <div className="tweet">
         <div className="tweet__header">
@@ -23,6 +27,7 @@ const Tweet = ({id, text, author}) => {
             {text}
             </p>
         </div>
+        <button className="btn_delete" onClick={() => deleteTweet(id)}> Delete </button>
         </div>
     );
 }

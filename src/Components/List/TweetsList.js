@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import './TweetsList.scss';
 import Tweet from "../Tweet/Tweet";
 import useTweets from "../Hooks/useTweets";
+import { docsContext } from "../../Context/DocsContext";
 
 const TweetsList = () => {
-    const [tweetsList, setTweetsList] = useState([]);
-
-    
+      
     const { showDocs } = useTweets();
+    const { tweetsList } = useContext(docsContext);
 
     useEffect(() => {
         const showDocsAsync = async () => {
             const myList = await showDocs();
-            setTweetsList(myList);
         };
 
         showDocsAsync();

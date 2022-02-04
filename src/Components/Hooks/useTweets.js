@@ -1,8 +1,13 @@
 import React from "react";
+import { useContext } from "react"; 
+import { docsContext } from "../../Context/DocsContext";
 import { addDoc, getDocs, doc, deleteDoc } from "firebase/firestore";
 import { getRefCollection } from "../../Firebase/config";
 
 const useTweets = () => {
+
+    const { setTweetsList } = useContext(docsContext);
+
     // Get all docs from the collection
     const showDocs = async () => {
         try {
@@ -14,8 +19,8 @@ const useTweets = () => {
                     ...doc.data(),
                 };
             });
-
-            return tweetsArray;
+            // Upload my array of Docs (tweets)
+            return setTweetsList(tweetsArray);
 
         } catch (error) {
             console.log("Error showing docs ", error);
@@ -27,6 +32,8 @@ const useTweets = () => {
         try {
         const docRef = await addDoc(getRefCollection("tweets"), tweetObject); 
         console.log("Document written with ID: ", docRef.id);
+        // show docs on live
+        await showDocs();
         } catch (e) {
         console.error("Error adding document: ", e);
         }
@@ -39,6 +46,8 @@ const useTweets = () => {
             const docRef = doc(getRefCollection("tweets"), idDocument);
             // Deleting 
             await deleteDoc(docRef);
+            // show docs on live
+            await showDocs();
         } catch (e) {
             console.error("Error deleting document: ", e);
         }
