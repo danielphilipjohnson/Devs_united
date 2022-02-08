@@ -1,7 +1,14 @@
 import React from "react";
 import { useContext } from "react"; 
 import { docsContext } from "../../Context/DocsContext";
-import { addDoc, getDocs, doc, deleteDoc } from "firebase/firestore";
+import { 
+    addDoc, 
+    getDocs, 
+    doc, 
+    deleteDoc, 
+    updateDoc, 
+    getDoc 
+} from "firebase/firestore";
 import { getRefCollection } from "../../Firebase/config";
 
 const useTweets = () => {
@@ -53,7 +60,21 @@ const useTweets = () => {
         }
     };
 
-        return { newTweet, showDocs, deleteTweet };
+    // Update Doc (Likes)
+    const addLikes = async (idDocument) => {
+        
+        // get doc reference
+        const docRef = doc(getRefCollection("tweets"), idDocument);
+        const docSnap = await getDoc(docRef);
+
+        await updateDoc(docRef, {
+            likes: docSnap.data().likes ? docSnap.data().likes + 1 : 1,
+        });
+        // show docs on live
+        await showDocs();
+    };
+
+        return { newTweet, showDocs, deleteTweet, addLikes };
 
 };
 

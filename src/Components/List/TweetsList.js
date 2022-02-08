@@ -25,7 +25,8 @@ const TweetsList = () => {
                     key = {element.id}
                     id = {element.id}
                     text = {element.tweet}
-                    author = {element.author} 
+                    author = {element.author}
+                    likes = {element.likes} 
                 />
                 ))
             :   <p className="noTweets">No tweets yet</p> 

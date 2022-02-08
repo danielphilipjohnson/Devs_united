@@ -1,7 +1,7 @@
 import React from "react";
 import useTweets from "../Hooks/useTweets";
 import './FormTweet.scss';
-
+import LoginAuth from "../Home/Login/Login";
 
 
 const FormTweet = ({formState, setFormState, initialFormState}) => {
@@ -45,6 +45,7 @@ const FormTweet = ({formState, setFormState, initialFormState}) => {
                 Post
             </button>
         </form>
+        <LoginAuth />
         </div>
     );
 }
