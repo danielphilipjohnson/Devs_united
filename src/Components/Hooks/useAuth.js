@@ -1,26 +1,31 @@
 
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { useState } from 'react';
+import {provider, auth}  from "../../Firebase/config"
+import { signInWithPopup } from "firebase/auth";
+import { docsContext } from "../../Context/DocsContext";
 
 const useAuthentication = () => {
-    const auth = getAuth();
-    signInWithPopup(auth, provider)
-    .then((result) => {
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    const token = credential.accessToken;
-    // The signed-in user info.
-    const user = result.user;
-    // ...
-    }).catch((error) => {
-    // Handle Errors here.
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // The email of the user's account used.
-    const email = error.email;
-    // The AuthCredential type that was used.
-    const credential = GoogleAuthProvider.credentialFromError(error);
-    // ...
-  });
+
+    const [user, setUser] = useState()
+
+    const signInWithGoogle = async () => {
+
+      try {
+        const result = await signInWithPopup(auth, provider);
+        const user = result.user;
+        console.log("show me the user", user)
+
+        // update user information
+        setUser(user);
+        // ...
+        } catch(error) {
+        // Handle Errors here.
+        const errorMessage = error.message;
+        console.log("Show me the error: ",errorMessage)
+      };
+    };
+
+    return { signInWithGoogle, user };
 }
 
 export default useAuthentication;

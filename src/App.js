@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.scss';
-import useTweets from './../src/Components/Hooks/useTweets';
+import useTweets from './Components/Hooks/useTweets';
 import TweetsList from "../src/Components/List/TweetsList";
 import FormTweet from "./Components/Form/FormTweet";
 

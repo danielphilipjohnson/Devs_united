@@ -1,7 +1,7 @@
 
 import React from "react";
 import './Tweet.scss';
-import {ReactComponent as UserLogo} from "../../assets/icons/user.svg"
+// import {ReactComponent as UserLogo} from "../../assets/icons/user.svg"
 import redHeart from "../../assets/icons/heart.svg"
 import useTweets from "../Hooks/useTweets";
 
@@ -18,7 +18,7 @@ const Tweet = ({id, text, author, likes}) => {
         <div className="tweet">
         <div className="tweet__header">
             <div className="tweet__header__user">
-            <UserLogo />
+            {/* <UserLogo /> */}
             <span>{author}</span>
             </div>
             <div className="tweet__header__date">

@@ -14,5 +14,10 @@
         width: 20px;
         height: 20px;
     }
+
+    &__header__user {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
