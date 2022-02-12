@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from "../../../Context/UserContext"
 import './Login.scss';
 import useAuthentication from '../../Hooks/useAuth';
 
 
 const LoginAuth = () => {
 
-    const { signInWithGoogle, user } = useAuthentication();
+    const { user } = useContext(UserContext);
+    const { signInWithGoogle } = useAuthentication();
 
 
     return (
         <div className="login">
-        <button className="login_btn" onClick={() => signInWithGoogle()}>Login</button> 
-        {user && <h3>Hola, {user.displayName}</h3>}
-        {user && <img src={user.photoURL} alt="user-photo" />}
+        <button className="login_btn" onClick={() => signInWithGoogle()}>Log In</button> 
+        {user ? 
+        " " : <p>Please, login</p>}
+        <br />
         </div>
     );
 }

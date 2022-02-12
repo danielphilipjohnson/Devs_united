@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './App.scss';
-import useTweets from './Components/Hooks/useTweets';
 import TweetsList from "../src/Components/List/TweetsList";
 import FormTweet from "./Components/Form/FormTweet";
 
 const initialFormState = {
   tweet: "",
-  author: "",
+  author: undefined,
+  uid: undefined,
+  email: undefined,
 }
 
 function App() {

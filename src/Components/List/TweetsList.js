@@ -23,10 +23,7 @@ const TweetsList = () => {
             ? tweetsList.map((element) => (
                 <Tweet
                     key = {element.id}
-                    id = {element.id}
-                    text = {element.tweet}
-                    author = {element.author}
-                    likes = {element.likes} 
+                    tweetData = {element}
                 />
                 ))
             :   <p className="noTweets">No tweets yet</p> 

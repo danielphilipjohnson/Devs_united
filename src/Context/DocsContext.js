@@ -5,13 +5,13 @@ export const docsContext = createContext();
 const DocsProvider = ({children}) => {
 
     const [tweetsList, setTweetsList] = useState([]);
-    const [user, setUser] = useState();
 
     return (
-        <docsContext.Provider value={{tweetsList, setTweetsList, user, setUser}}>
+        <docsContext.Provider value={{tweetsList, setTweetsList}}>
         {children}
         </docsContext.Provider>
     )
 }
 
 export default DocsProvider;
+

@@ -43,6 +43,7 @@ const useTweets = () => {
         await showDocs();
         } catch (e) {
         console.error("Error adding document: ", e);
+        alert("PLEASE LOG IN")
         }
     };
 

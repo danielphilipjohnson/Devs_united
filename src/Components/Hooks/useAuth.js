@@ -1,19 +1,19 @@
 
-import { useState } from 'react';
+import { useContext } from 'react';
 import {provider, auth}  from "../../Firebase/config"
-import { signInWithPopup } from "firebase/auth";
-import { docsContext } from "../../Context/DocsContext";
+import { signInWithPopup, signOut } from "firebase/auth";
+import { UserContext } from '../../Context/UserContext';
 
 const useAuthentication = () => {
 
-    const [user, setUser] = useState()
+   const { setUser } = useContext(UserContext);
 
     const signInWithGoogle = async () => {
 
       try {
         const result = await signInWithPopup(auth, provider);
         const user = result.user;
-        console.log("show me the user", user)
+        console.log("user", user)
 
         // update user information
         setUser(user);
@@ -25,7 +25,18 @@ const useAuthentication = () => {
       };
     };
 
-    return { signInWithGoogle, user };
+    const signOutGoogle = async () => {
+      try {
+        await signOut(auth);
+
+        setUser(null);
+        } catch(error) {
+          // An error happened.
+          console.log("error logout", error)
+        };
+      }
+
+    return { signInWithGoogle, signOutGoogle };
 }
 
 export default useAuthentication;
