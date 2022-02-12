@@ -11,7 +11,7 @@ const Tweet = ({tweetData}) => {
 
     const { deleteTweet, addLikes } = useTweets();
     const { user } = useContext(UserContext);
-    const { id, tweet, likes, uid } = tweetData;
+    const { id, tweet, likes, uid, author, img } = tweetData;
     
 
     const handleLikes = async (id) => {
@@ -22,8 +22,8 @@ const Tweet = ({tweetData}) => {
         <div className="tweet">
         <div className="tweet__header">
             <div className="tweet__header__user">
-            {user ? <img src={user.photoURL} alt="user-photo" /> : <UserLogo />}
-            {user ? <span>{user.displayName}</span> : <h3>Desconocido</h3>}
+            <img src={img} alt="user-photo" />
+            <span>{author}</span>
             </div>
             <div className="tweet__header__date">
             <span>1 day ago</span>

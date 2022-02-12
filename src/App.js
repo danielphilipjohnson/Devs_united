@@ -7,7 +7,7 @@ const initialFormState = {
   tweet: "",
   author: undefined,
   uid: undefined,
-  email: undefined,
+  img: undefined,
 }
 
 function App() {

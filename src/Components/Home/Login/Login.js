@@ -14,7 +14,7 @@ const LoginAuth = () => {
         <div className="login">
         <button className="login_btn" onClick={() => signInWithGoogle()}>Log In</button> 
         {user ? 
-        " " : <p>Please, login</p>}
+        "" : <p>Please, login</p>}
         <br />
         </div>
     );

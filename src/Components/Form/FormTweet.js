@@ -18,7 +18,7 @@ const FormTweet = ({formState, setFormState, initialFormState}) => {
             [e.target.name]: e.target.value,
             author: user ? user.displayName : "Desconocido",
             uid: user?.uid,
-            email: user?.email
+            img: user?.photoURL,
         })
     };
 
@@ -38,14 +38,6 @@ const FormTweet = ({formState, setFormState, initialFormState}) => {
             value ={formState.tweet}
             onChange={handleChange} 
             />
-            {/* <input 
-            className="form_author" 
-            type="text" 
-            placeholder="Name"
-            name = "author"
-            value ={formState.author}
-            onChange={handleChange} 
-            /> */}
             <button 
             className="form_btn"
             type="submit">
