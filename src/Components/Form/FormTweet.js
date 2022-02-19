@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import useTweets from "../Hooks/useTweets";
 import { UserContext } from "../../Context/UserContext";
 import './FormTweet.scss';
-import LoginAuth from "../Home/Login/Login";
-import LogoutAuth from "../../Components/Home/Logout/Logout.js";
+import LoginAuth from "../Login/Login/Login";
+import LogoutAuth from "../Login/Logout/Logout.js";
 
 
 const FormTweet = ({formState, setFormState, initialFormState}) => {

@@ -1,8 +1,8 @@
 
 import { useContext } from 'react';
-import {provider, auth}  from "../../Firebase/config"
+import {provider, auth}  from "../Firebase/config"
 import { signInWithPopup, signOut } from "firebase/auth";
-import { UserContext } from '../../Context/UserContext';
+import { UserContext } from '../Context/UserContext';
 
 const useAuthentication = () => {
 
