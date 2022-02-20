@@ -39,6 +39,10 @@ const Login = () => {
                 {user ? 
                 "" : <p>Please, login</p>}
                 <br />
+
+                <footer className="footer">
+                    <p>&copy</p>
+                </footer>
             </div>
             </div>
             
