@@ -4,12 +4,14 @@ import './Tweet.scss';
 import redHeart from "../../assets/icons/heart.svg"
 import useTweets from "../../Hooks/useTweets";
 import {UserContext} from "../../Context/UserContext";
+import { ColorContext } from "../../Context/ColorContext";
 
 
 const Tweet = ({tweetData}) => {
 
     const { deleteTweet, addLikes } = useTweets();
     const { user } = useContext(UserContext);
+    const { colors } = useContext(ColorContext);
     const { id, tweet, likes, uid, author, img } = tweetData;
     
     const handleLikes = async (id) => {
@@ -21,7 +23,7 @@ const Tweet = ({tweetData}) => {
         <div className="tweet__header">
             <div className="tweet__header__user">
             <img src={img} alt="user-photo" />
-            <span>{author}</span>
+            <span className={`color ${colors}`}>{author}</span>
             </div>
             <div className="tweet__header__date">
             <span>1 day ago</span>
