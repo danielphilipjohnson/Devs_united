@@ -1,6 +1,5 @@
-import React from "react";
 import { useContext } from "react"; 
-import { docsContext } from "../../Context/DocsContext";
+import { docsContext } from "../Context/DocsContext";
 import { 
     addDoc, 
     getDocs, 
@@ -9,7 +8,7 @@ import {
     updateDoc, 
     getDoc 
 } from "firebase/firestore";
-import { getRefCollection } from "../../Firebase/config";
+import { getRefCollection } from "../Firebase/config";
 
 const useTweets = () => {
 
