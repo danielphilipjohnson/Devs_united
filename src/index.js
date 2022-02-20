@@ -8,13 +8,13 @@ import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ColorProvider>
-      <UserProvider>
+    <UserProvider>
+      <ColorProvider>
         <DocsProvider>
           <App />
         </DocsProvider>
-      </UserProvider>
-    </ColorProvider>
+      </ColorProvider>
+    </UserProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
