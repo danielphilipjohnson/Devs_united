@@ -6,7 +6,7 @@ import userPic from '../../assets/icons/user.svg'
 
 function Home({tweetData}) {
 
-    const { setColors } = useContext(ColorContext);
+    const { colors } = useContext(ColorContext);
     const { user } = useContext(UserContext);
     const { img } = tweetData;
 
@@ -15,7 +15,7 @@ function Home({tweetData}) {
         <header className="header">
             <div>
                 {user ? 
-                <img className={`header_user ${setColors}`} src={img} alt="user" /> : <img className={`header_user ${setColors}`} src={userPic} alt="general-user" />
+                <img className={`header_user ${colors}`} src={img} alt="user" /> : <img className={`header_user ${colors}`} src={userPic} alt="general-user" />
                 }
             </div>
             <img className="header_logo" src={LogoDevs} alt="Devs_United Logo" />

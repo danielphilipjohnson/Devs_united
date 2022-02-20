@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import DocsProvider from './Context/DocsContext';
 import UserProvider from './Context/UserContext';
+import ColorProvider from './Context/ColorContext';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <UserProvider>
+      <ColorProvider>
+        <App />
+      </ColorProvider>
       <DocsProvider>
-      <App />
     </DocsProvider>
     </UserProvider>
   </React.StrictMode>,
