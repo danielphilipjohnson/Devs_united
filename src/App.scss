@@ -7,6 +7,41 @@ $primary-color: #2E132C;
 $secondary-color: #F50D5A;
 $tertiary-color: #FFFF;
 
+
+//base.scss Colors
+$pink-color: #F50D5A;
+$orange-color: #FF865C;
+$yellow-color: #FFEA5C;
+$green-color: #00DA76;
+$blue-color: #0096CE;
+$purple-color: #800FFF;
+
+// Colors
+.pink {
+    background-color: $pink-color;
+}
+
+.orange {
+    background-color: $orange-color;
+}  
+
+.yellow {
+    background-color: $yellow-color;
+}
+
+.green {
+    background-color: $green-color;
+}
+
+.blue {
+    background-color: $blue-color;
+}
+
+.purple {
+    background-color: $purple-color;
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -31,3 +66,5 @@ $tertiary-color: #FFFF;
         padding: 15px 0;
     }
 }
+
+
