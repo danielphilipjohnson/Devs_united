@@ -1,7 +1,6 @@
 
 import React, { useContext } from "react";
 import './Tweet.scss';
-import {ReactComponent as UserLogo} from "../../assets/icons/user.svg"
 import redHeart from "../../assets/icons/heart.svg"
 import useTweets from "../Hooks/useTweets";
 import {UserContext} from "../../Context/UserContext";

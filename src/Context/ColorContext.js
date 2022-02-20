@@ -4,10 +4,10 @@ export const ColorContext = createContext();
 
 const ColorProvider = ({children}) => {
 
-    const [color, setColor] = useState('');
+    const [colors, setColors] = useState('#ffff');
 
     return (
-        <ColorContext.Provider value={{color, setColor}}>
+        <ColorContext.Provider value={{colors, setColors}}>
         {children}
         </ColorContext.Provider>
     )

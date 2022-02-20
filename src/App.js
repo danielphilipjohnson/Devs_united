@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.scss';
 import Login from './Pages/Login/login.jsx'
 import Welcome from './Pages/welcome/welcome.jsx'
+import Home from './Pages/Home/home.jsx'
+import Profile from './Pages/Profile/profile.jsx'
 
 // import TweetsList from "../src/Components/List/TweetsList";
 // import FormTweet from "./Components/Form/FormTweet";
@@ -23,6 +25,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/welcome" element={<Welcome />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
 

@@ -1,0 +1,61 @@
+$primary-font: 'Silkscreen Expanded', sans-serif;
+$secondary-font: 'Fira Code', monospace;
+
+//base.scss Colors
+$primary-color: #250C23;
+$pink-color: #F50D5A;
+$orange-color: #FF865C;
+$yellow-color: #FFEA5C;
+$green-color: #00DA76;
+$blue-color: #0096CE;
+$purple-color: #800FFF;
+
+.header {
+    background-color: $primary-color;
+
+    &_user {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+
+        .pink {
+            border: 2px solid $pink-color;
+        }
+        
+        .orange {
+            border: 2px solid $orange-color;
+        }
+
+        .yellow {
+            border: 2px solid $yellow-color;
+        }
+
+        .green {
+            border: 2px solid $green-color;
+        }
+
+        .blue {
+            border: 2px solid $blue-color;
+        }
+
+        .purple {
+            border: 2px solid $purple-color;
+        }
+    }
+
+    &_logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    &_text {
+        font-size: 1rem;
+        color: $pink-color;
+        font-family: $secondary-font;
+
+        span {
+            font-family: $primary-font;
+            color: #fff;
+        }
+    }
+}

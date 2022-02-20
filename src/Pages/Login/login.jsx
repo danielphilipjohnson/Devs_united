@@ -41,7 +41,7 @@ const Login = () => {
                 <br />
 
                 <footer className="footer">
-                    <p>&copy</p>
+                    <p>© 2020 Devs_United - <span>BETA</span></p>
                 </footer>
             </div>
             </div>
