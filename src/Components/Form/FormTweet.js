@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import useTweets from "../Hooks/useTweets";
+import useTweets from "../../Hooks/useTweets";
 import { UserContext } from "../../Context/UserContext";
 import './FormTweet.scss';
 import LoginAuth from "../Login/Login/Login";

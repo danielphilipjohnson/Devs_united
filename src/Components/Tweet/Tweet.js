@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 import './Tweet.scss';
 import redHeart from "../../assets/icons/heart.svg"
-import useTweets from "../Hooks/useTweets";
+import useTweets from "../../Hooks/useTweets";
 import {UserContext} from "../../Context/UserContext";
 
 
@@ -12,7 +12,6 @@ const Tweet = ({tweetData}) => {
     const { user } = useContext(UserContext);
     const { id, tweet, likes, uid, author, img } = tweetData;
     
-
     const handleLikes = async (id) => {
         await addLikes(id);
     };

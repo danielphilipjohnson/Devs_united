@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import './TweetsList.scss';
 import Tweet from "../Tweet/Tweet";
-import useTweets from "../Hooks/useTweets";
+import useTweets from "../../Hooks/useTweets";
 import { docsContext } from "../../Context/DocsContext";
 
 const TweetsList = () => {
@@ -11,7 +11,7 @@ const TweetsList = () => {
 
     useEffect(() => {
         const showDocsAsync = async () => {
-            const myList = await showDocs();
+            return await showDocs();
         };
 
         showDocsAsync();
