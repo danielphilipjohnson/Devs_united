@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.scss';
-import Home from './Pages/Home/home'
+import Login from './Pages/Login/login.jsx'
+import Welcome from './Pages/welcome/welcome.jsx'
 
 // import TweetsList from "../src/Components/List/TweetsList";
 // import FormTweet from "./Components/Form/FormTweet";
@@ -20,7 +21,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/welcome" element={<Welcome />} />
       </Routes>
     </Router>
 

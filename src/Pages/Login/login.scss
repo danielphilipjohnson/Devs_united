@@ -1,0 +1,112 @@
+// base.scss Fonts
+$primary-font: 'Silkscreen Expanded', sans-serif;
+$secondary-font: 'Fira Code', monospace;
+
+//base.scss Colors
+$primary-color: #2E132C;
+$secondary-color: #F50D5A;
+$tertiary-color: #FFFF;
+
+.home {
+    background-color: $primary-color;
+    width: 100%;
+    height: 100vh;
+}
+
+.home-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 1500px;
+
+    .devs-logo {
+        width: 25%;
+    }
+
+    p {
+        font-family: $secondary-font;
+        padding: 20px 0px;
+    }
+}
+
+.login {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    width: 26%;
+
+    &_title {
+        font-family: $primary-font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+
+    &_btn {
+        background-color: #4285F4;
+        font-size: 1.2rem;
+        border: none;
+        color: #ffff;
+        padding: 4px 10px;
+        font-family: Roboto, "Helvetica Neue", sans-serif;
+        width: 100%;
+    }
+
+    &_btn:hover {
+        cursor: pointer;
+    }
+
+    .google-login {
+        background-color: #4285F4;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        border: 1px solid #4285F4;
+        border-radius: 5px;
+        margin-bottom: 20px;
+
+        &_logo-container {
+            background-color: #fff;
+            width: 10%;
+            padding: 10px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: inherit;
+            border-radius: 5px 0px 0px 5px;
+        }
+
+        &_logo {
+            width: 70%;
+            background-color: #fff;
+        }
+    }
+
+    .github-login {
+        background-color: #080808;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #262627;
+        border-radius: 5px;
+        position: relative;
+
+        &_logo {
+            filter: invert(100%) sepia(8%) saturate(663%) hue-rotate(17deg) brightness(121%) contrast(99%);
+            background-color: #fff;
+            width: 20%;
+            border-radius: 5px 0px 0px 5px;
+            position: absolute;
+            left: 10px;
+        }
+
+        .login_btn {
+            background-color: #080808;
+        }
+
+    }
+}
+
+  

@@ -19,9 +19,10 @@ const firebaseConfig = {
   const db = getFirestore();
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
+ 
 
   const getRefCollection = (collectionPath) => collection(db, collectionPath);
 
-  export { db, getRefCollection, auth, provider};
+  export { db, getRefCollection, auth, provider };
 
   export default app;
