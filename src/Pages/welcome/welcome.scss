@@ -1,116 +1,112 @@
 // base.scss Fonts
-$primary-font: 'Silkscreen Expanded', sans-serif;
-$secondary-font: 'Fira Code', monospace;
+$primary-font: "Silkscreen Expanded", sans-serif;
+$secondary-font: "Fira Code", monospace;
 
 //base.scss Colors
-$pink-color: #F50D5A;
-$orange-color: #FF865C;
-$yellow-color: #FFEA5C;
-$green-color: #00DA76;
-$blue-color: #0096CE;
-$purple-color: #800FFF;
+$pink-color: #f50d5a;
+$orange-color: #ff865c;
+$yellow-color: #ffea5c;
+$green-color: #00da76;
+$blue-color: #0096ce;
+$purple-color: #800fff;
 
 .login {
+  &_title {
+    padding-bottom: 20px;
+  }
 
+  &_user {
+    color: $pink-color;
+    font-size: 2.5rem;
+  }
 
-    &_title {
-        padding-bottom: 20px;
-    }
+  &_username {
+    border-style: none;
+    border-radius: 3px;
+    padding: 13px 5px;
+    background-color: #150714;
+    color: #914d8b;
+    font-family: $secondary-font;
+    margin-bottom: 20px;
+  }
 
-    &_user {
-        color: $pink-color;
-        font-size: 2.5rem;
-    }
-
-    &_username {
-        border-style: none;
-        border-radius: 3px;
-        padding: 13px 5px;
-        background-color: #150714; 
-        color: #914D8B;
-        font-family: $secondary-font;
-        margin-bottom: 20px; 
-    }
-
-    &_username::placeholder {
-        color: #914D8B;
-    }
-    &_colors {
-        font-family: $secondary-font;
-        font-size: 1.1rem;
-        padding-bottom: 20px;
-    }
+  &_username::placeholder {
+    color: #914d8b;
+  }
+  &_colors {
+    font-family: $secondary-font;
+    font-size: 1.1rem;
+    padding-bottom: 20px;
+  }
 }
 
-
 .colors-container {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  
+  .color {
+    height: 3.3rem;
+    width: 3.3rem;
 
-    .color {
-        height: 3.3rem;
-        width: 3.3rem;
-
-        &.pink {
-            background-color: $pink-color;
-        }
-
-        &.orange {
-            background-color: $orange-color;
-        }  
-
-        &.yellow {
-            background-color: $yellow-color;
-        }
-
-        &.green {
-            background-color: $green-color;
-        }
-
-        &.blue {
-            background-color: $blue-color;
-        }
-
-        &.purple {
-            background-color: $purple-color;
-        }
+    &.pink {
+      background-color: $pink-color;
     }
+
+    &.orange {
+      background-color: $orange-color;
+    }
+
+    &.yellow {
+      background-color: $yellow-color;
+    }
+
+    &.green {
+      background-color: $green-color;
+    }
+
+    &.blue {
+      background-color: $blue-color;
+    }
+
+    &.purple {
+      background-color: $purple-color;
+    }
+  }
 }
 
 .color:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .btn_welcome {
-    background-color: #00DA76;
-    border: none;
-    padding: 9px 0px;
-    font-family: $primary-font;
-    color: #ffff;
-    font-size: 1.5rem;
+  background-color: #00da76;
+  border: none;
+  padding: 9px 0px;
+  font-family: $primary-font;
+  color: #ffff;
+  font-size: 1.5rem;
 }
 
 .btn_welcome:hover {
-    cursor: pointer;
-    transform: scale(1.03);
+  cursor: pointer;
+  transform: scale(1.03);
 }
 
 .footer {
-    position: absolute;
-    bottom: 8vh;
-    right: 24vw;
+  position: absolute;
+  bottom: 8vh;
+  right: 24vw;
 
-    p {
-        font-size: 0.8rem;
-        color: #60265B; 
-     
-        span {
-            color: $pink-color;
-            font-size: 0.8rem;
-        }
+  p {
+    font-size: 0.8rem;
+    color: #60265b;
+
+    span {
+      color: $pink-color;
+      font-size: 0.8rem;
     }
-    
+  }
 }
